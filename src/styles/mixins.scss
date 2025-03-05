@@ -1,0 +1,22 @@
+/*__________________________________________________________________;
+[Mixin]
+Project:	Jampack
+___________________________________________________________________*/;
+@mixin transform($transforms...) {
+    // combine the passed transforms into a space separated list
+    $transform-list: join($transforms, null, space);
+
+    // print out the transforms 
+    -webkit-transform: $transform-list;
+    -moz-transform: $transform-list;
+    -ms-transform: $transform-list;
+    -o-transform: $transform-list;
+    transform: $transform-list;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
